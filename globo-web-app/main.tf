@@ -1,10 +1,18 @@
 ##################################################################################
 # PROVIDERS
 ##################################################################################
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "4.34.0"
+    }
+  }
+}
 
 provider "aws" {
-  access_key                  = "test"
-  secret_key                  = "test"
+  access_key                  = "1234"
+  secret_key                  = "1234"
   region                      = "us-east-1"
   s3_use_path_style           = false
   skip_credentials_validation = true
